@@ -5,6 +5,17 @@
   --foreground: #171717;
 }
 
+@theme{
+  --color-cgreen-50: #dff1c1;
+  --color-cgreen-200: #a3bf74;
+  --color-cgreen-500: #587822;
+  --color-cgreen-600: #42591b;
+  --color-cgreen-900: #2b3a13;
+  --color-cpink-150: #f8e0e3;
+  --color-cpink-300: #f1c1c7;
+  --color-cpink-500: #db6877;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
