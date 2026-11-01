@@ -2,7 +2,6 @@ import React from 'react'
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Projects", href: "/projects" },
   { label: "Links", href: "/links" },
   { label: "CV", href: "/CV" },
 ];
@@ -16,7 +15,7 @@ const Navbar = () => {
   return (
     <nav
         aria-label="Main"
-        className="flex flex-wrap justify-center gap-2 border-2 border-cgreen-600 bg-csage-200 p-4 md:col-start-2 md:row-span-2 md:row-start-1 md:flex-col md:justify-start md:gap-1 md:rounded-r-3xl md:border-2 md:p-6"
+        className="flex flex-wrap justify-center gap-2 border-2 border-l-0 border-cgrey-100 bg-csage-200 p-4 md:col-start-2 md:row-span-2 md:row-start-1 md:flex-col md:justify-start md:gap-1 md:rounded-r-3xl md:p-6"
       >
         {navLinks.map((link) => (
           <a

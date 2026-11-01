@@ -32,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${zenMaruGothic.variable} ${nunito.variable} h-full antialiased`}
+      className={`${zenMaruGothic.variable} ${nunito.variable} h-full antialiased leading-relaxed`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

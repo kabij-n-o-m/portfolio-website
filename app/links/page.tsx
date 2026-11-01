@@ -16,9 +16,9 @@ const Links = () => {
   return (
     <div className="h-dvh bg-cwhite-50 text-ccharcoal-900 sm:p-6 justify-center flex">
       
-      <div className=" px-10 grid grid-cols-1 h-full overflow-y-auto rounded-l-3xl border-2 border-r-0 border-cgreen-600 bg-cblush-200  md:grid-rows-[auto_auto_minmax(0,1fr)] md:overflow-hidden
+      <div className=" px-15 py-5 grid grid-cols-1 h-full overflow-y-auto rounded-l-4xl border-2 border-r-0 border-cgrey-100 bg-cblush-200  md:grid-rows-[auto_auto_minmax(0,1fr)] md:overflow-hidden
       md:w-3/5">
-        <header className="px-6 pb-4 pt-8 text-center md:col-start-1 md:row-start-1">
+        <header className="px-6 pb-4 pt-4 text-center md:col-start-1 md:row-start-1">
           <h1 className="text-xl font-medium tracking-tight md:text-3xl">
             Links
           </h1>
@@ -29,7 +29,7 @@ const Links = () => {
             <section id="projects" aria-labelledby="projects-heading">
               <ul className="mt-3 grid gap-4 mx-10 sm:grid-cols-1 md:grid-cols-2">
                 {links.map((p) => (
-                  <li key={p.label} className={`mx-5 my-3 rounded-2xl p-4 ${p.tone}`}>
+                  <li key={p.label} className={`mx-5 my-3 rounded-4xl p-4 ${p.tone}`}>
                     <h3 className="text-lg font-medium">{p.label}</h3>
                     {p.href==="#" ? '' : (
                       <a
