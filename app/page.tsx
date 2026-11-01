@@ -1,69 +1,105 @@
-import Image from "next/image";
+import Navbar from "@/components/Navbar";
+
+
+const projects = [
+  {
+    title: "Gardening Task Tracker",
+    description: "(in development) \n A to-do app for gardening tasks. Search for plants, add them to your garden, and get tasks depending on the time of year and weather.",
+    tech: ["React", "Next.js", "TypeScript", "Supabase", "TailwindCSS"],
+    href: "https://github.com/kabij-n-o-m/website_plants",
+    tone: "bg-csage-200",
+  },
+  {
+    title: "Can I have another coffee?",
+    description: "(in development) A web app to track your caffeine intake and check if you can have another coffee and still fall asleep on time.",
+    tech: ["React", "Next.js", "TypeScript", "TailwindCSS"],
+    href: "#",
+    tone: "bg-csage-200",
+  },
+];
+
+const focusStyle =
+  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ccharcoal-900";
+const linkStyle = `underline decoration-cpink-500 decoration-2 underline-offset-4 rounded-sm hover:bg-ccharcoal-900 hover:text-csage-200 ${focusStyle}`;
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <div className="h-dvh bg-cwhite-50 text-ccharcoal-900 sm:p-6 justify-center flex">
+      
+      <div className="px-15 py-5 grid grid-cols-1 h-full overflow-y-auto rounded-l-4xl border-2 border-r-0 border-cgrey-100 bg-cblush-200  md:grid-rows-[auto_auto_minmax(0,1fr)] md:overflow-hidden
+      md:w-3/5">
+        <header className="pt-4 text-center md:col-start-1 md:row-start-1">
+          <h1 className="text-xl font-medium tracking-tight md:text-3xl">
+            Ivan Murphy
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="mt-2 text-base sm:text-lg">
+            Computer Science student
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        </header>
+
+        
+
+        <main className="md:overflow-y-auto">
+          <section
+            id="about"
+            aria-labelledby="about-heading"
+            className="px-6 pb-6 pt-4 md:col-start-1 md:row-start-2"
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+            <h2 id="about-heading" className="text-2xl font-medium">
+              About me
+            </h2>
+            <p className="mt-2 text-base leading-relaxed">
+              Hi I'm Ivan! I'm a third year computer science student at the University of Southampton. I like making cute, easy to use websites to solve problems I encounter in my daily life.
+              Outside of lectures you can find me in the Annex with the Stage Technicians Society setting up for a show, in the garden tending to my plants, or sat in bed watching video essays about maths or philosophy. 
+              I don't have LinkedIn but I do have an email so don't hesitate to get in touch!
+              
+            </p>
+          </section>
+
+          <div className="px-6 pb-8 pt-2 md:col-span-2 md:row-start-3 ">
+            <section id="projects" aria-labelledby="projects-heading">
+              <h2 id="projects-heading" className="text-2xl font-medium">
+                Projects
+              </h2>
+              <ul className="mt-3 grid gap-4 sm:grid-cols-1 md:grid-cols-2">
+                {projects.map((p) => (
+                  <li key={p.title} className={`rounded-4xl p-4 ${p.tone}`}>
+                    <h3 className="text-lg font-medium">{p.title}</h3>
+                    <p className="mt-1 text-sm leading-relaxed">{p.description}</p>
+                    <p className="mt-2 text-sm font-medium">{p.tech.join(", ")}</p>
+                    {p.href==="#" ? '' : (
+                      <a
+                        href={p.href}
+                        className={`mt-2 inline-block text-sm font-medium ${linkStyle}`}
+                      >
+                        View project
+                      </a>
+                    )}
+                    
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            <section id="contact" aria-labelledby="contact-heading" className="mt-8">
+              <h2 id="contact-heading" className="text-2xl font-medium">
+                Contact
+              </h2>
+              <p className="mt-2 text-base leading-relaxed">
+                Email me at{" "}
+                <a href="mailto:ivanmurphy1005@gmail.com" className={`font-medium ${linkStyle}`}>
+                  ivanmurphy1005@gmail.com
+                </a>{" "}
+                
+              </p>
+            </section>
+          </div>
+        </main>
+      </div>
+
+
+      <Navbar />
+
     </div>
   );
 }
