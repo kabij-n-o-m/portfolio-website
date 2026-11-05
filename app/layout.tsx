@@ -16,7 +16,7 @@ const nunito = Nunito({
 
 
 export const metadata: Metadata = {
-  title: "Ivan Murphy - Computer SciencePortfolio",
+  title: "Ivan Murphy (kabijnom)",
   description: "I'm Ivan, a computer science student at the University of Southampton.",
 };
 
