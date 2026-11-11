@@ -1,6 +1,6 @@
 My personal website. Includes "about me", projects, links to contact me, and my CV.
-Can be found at kabijnom.xyz
-## To run locally
+Can be found at [kabijnom.xyz](https://kabijnom.xyz/)
+## To run locally 
 
 ```
 git clone https://github.com/kabij-n-o-m/portfolio-website.git 
