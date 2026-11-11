@@ -1,4 +1,5 @@
 My personal website. Includes "about me", projects, links to contact me, and my CV.
+Can be found at kabijnom.xyz
 ## To run locally
 
 ```
