@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-
+import {focusStyle,  linkStyle, whiteBackgroundStyle, pinkContainerStyle, headingStyle, headerStyle } from "@/components/Template";
 
 const projects = [
   {
@@ -18,21 +18,16 @@ const projects = [
   },
 ];
 
-const focusStyle =
-  "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ccharcoal-900";
-const linkStyle = `underline decoration-cpink-500 decoration-2 underline-offset-4 rounded-sm hover:bg-ccharcoal-900 hover:text-csage-200 ${focusStyle}`;
 
 export default function Home() {
   return (
-    <div className="h-dvh bg-cwhite-50 text-ccharcoal-900 sm:p-6 justify-center flex">
-      
-      <div className="px-15 py-5 grid grid-cols-1 h-full overflow-y-auto rounded-l-4xl border-2 border-r-0 border-cgrey-100 bg-cblush-200  md:grid-rows-[auto_auto_minmax(0,1fr)] md:overflow-hidden
-      md:w-3/5">
-        <header className="pt-4 text-center md:col-start-1 md:row-start-1">
-          <h1 className="text-xl font-medium tracking-tight md:text-3xl">
+    <div className={whiteBackgroundStyle}>      
+      <div className={pinkContainerStyle}>
+        <header className={headerStyle}>
+          <h1 className={headingStyle}>
             Ivan Murphy
           </h1>
-          <p className="mt-2 text-base sm:text-lg">
+          <p className="mt-2 text-lg">
             Computer Science student
           </p>
         </header>
@@ -43,9 +38,9 @@ export default function Home() {
           <section
             id="about"
             aria-labelledby="about-heading"
-            className="px-6 pb-6 pt-4 md:col-start-1 md:row-start-2"
+            className="px-6 pb-6 md:col-start-1 md:row-start-2"
           >
-            <h2 id="about-heading" className="text-2xl font-medium">
+            <h2 id="about-heading" className="text-xl font-medium">
               About me
             </h2>
             <p className="mt-2 text-base leading-relaxed">
@@ -58,7 +53,7 @@ export default function Home() {
 
           <div className="px-6 pb-8 pt-2 md:col-span-2 md:row-start-3 ">
             <section id="projects" aria-labelledby="projects-heading">
-              <h2 id="projects-heading" className="text-2xl font-medium">
+              <h2 id="projects-heading" className="text-xl font-medium">
                 Projects
               </h2>
               <ul className="mt-3 grid gap-4 sm:grid-cols-1 md:grid-cols-2">
@@ -82,7 +77,7 @@ export default function Home() {
             </section>
 
             <section id="contact" aria-labelledby="contact-heading" className="mt-8">
-              <h2 id="contact-heading" className="text-2xl font-medium">
+              <h2 id="contact-heading" className="text-xl font-medium">
                 Contact
               </h2>
               <p className="mt-2 text-base leading-relaxed">
@@ -96,10 +91,8 @@ export default function Home() {
           </div>
         </main>
       </div>
-
-
       <Navbar />
-
     </div>
+
   );
 }
